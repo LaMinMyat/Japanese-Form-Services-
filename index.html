@@ -2,25 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>5 Reels Slot</title>
+  <title>Yi Mon Japanese Form Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <style>
+    @property --k {
+      syntax: '<number>';
+      initial-value: 0;
+      inherits: false;
+    }
+    
     body {
-      text-decoration-color: red;
-      background:#6DA5C0;
-      align-items: center;
+      background: #6DA5C0;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .header {
       text-align: center;
+      margin-bottom: 30px;
     }
-    .yimon{
-      width: 99%;
-      
-    }
-    .header{
-    font-family: Times New Roman;
-    font-size: 35px;
-    font-weight: 800;
-    color:blue;
-    text-shadow: 1px 1px 1px #919191,
+    
+    h1.header {
+      font-family: "Times New Roman", serif;
+      font-size: 35px;
+      font-weight: 800;
+      color: blue;
+      text-shadow: 
+        1px 1px 1px #919191,
         1px 2px 1px green,
         1px 3px 1px #919191,
         1px 4px 1px #919191,
@@ -30,273 +44,357 @@
         1px 8px 1px #919191,
         1px 9px 1px #919191,
         1px 10px 1px #012622,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+        1px 18px 6px rgba(16,16,16,0.4),
+        1px 22px 10px rgba(16,16,16,0.2),
+        1px 25px 35px rgba(16,16,16,0.2),
+        1px 30px 60px rgba(16,16,16,0.4);
     }
-    .btndiv{
-      width: 98%;
-      padding:20px;
+    
+    h2 {
+      text-align: center;
+      background: 
+        linear-gradient(90deg, 
+          hsl(calc(var(--k)*1turn), 95%, 65%), 
+          hsl(calc(var(--k)*1turn + 90deg), 95%, 65%)) text;
+      color: #0000;
+      font-size: 20px;
+      animation: k 4s linear infinite;
+      margin: 20px 0;
+    }
+    
+    @keyframes k { to { --k: 1 } }
+    
+    .content {
+      background: #294D61;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px;
+      color: #D8D5DB;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
+      display: flex;
+      flex-direction: column;
       position: relative;
+      padding-right: 120px;
+      overflow: hidden;
+      min-height: 200px;
     }
-    .service{
-      width: 500px;
-      height: 500px;
-      margin-left:75px;
-      margin-top: 70px;
+  .sor-sticker {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  max-height: 99%;
+  object-fit: contain;
+  width: 100px; /* သင်နှစ်သက်သလို အရွယ်အစားပြင်နိုင်ပါတယ် */
+  height: auto;
+  z-index: 10;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+    
+    .services-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      transition: opacity 0.3s ease;
+    }
+    
+    .service {
+      width: 100%;
+      min-height: 300px;
       border-radius: 20px;
       border: 2px solid gold;
-      background: #012622;
+      background: #294D61;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
+      padding: 20px;
+      position: relative;
+      padding-bottom: 80px;
+      box-sizing: border-box;
     }
-    button {
+    
+    .service button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 200px;
       height: 70px;
-      margin-top: 420px;
       border-radius: 10px;
-      font-size: 25px;
-      font-family: Times New Roman;
+      background: black;
+      color: white;
+      font-family: "Times New Roman", serif;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
-    #x1, #x2, #x3 ,#x4 ,#x5, #x6, #x7, #x8, #x9 {
-      width: 30px;
-      height: 30px;
-      border-radius: 30px;
-      margin: 7px;
-      float: right;
+    
+    .service button:hover {
+      background: #333;
     }
-    h1 {
-      font-family: Times New Roman;
-      font-size: 25px;
-      color: gold;
-      text-align: center;
-    }
+    
     .form {
       display: none;
       background: #2D3142;
       width: 90%;
+      max-width: 800px;
       margin: 20px auto;
       border: 2px solid #272727;
       border-radius: 20px;
-      padding: 10px;
+      padding: 20px;
       position: relative;
-    }
-    p {
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
       color: #D8D5DB;
-      text-align: left;
     }
+    
+    .form button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: red;
+      color: white;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
     .visible {
       display: block;
     }
-    #h {
+    
+    .form-header {
       text-align: center;
-      margin-top: 10px;
+      margin: 20px 0;
       background: #ADACB5;
       border: 2px solid gold;
       border-radius: 10px;
       padding: 10px;
+      font-weight: bold;
     }
+    
     table {
-      align-content: center;
-      border: 2px solid #FF8966;
-      margin: 20px auto;
-      width: 90%;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
     }
+    
     th, td {
-      color: white;
-      text-align: center;
       border: 2px solid #0F909C;
-      padding: 8px;
-    }
-    footer {
-      margin-top: 50px;
+      padding: 10px;
+      text-align: center;
       color: white;
     }
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
+    
+    th {
+      background-color: #1a3e4c;
+    }
+    
+/* ရှိပြီးသား CSS တွေကို မဖျက်ပါ */
+/* Footer အတွက် CSS */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #294D61;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* Content နဲ့ form တွေကို footer နဲ့မထိစေဖို့ */
+.container {
+  padding-bottom: 70px; /* footer height ထက်နည်းနည်းပိုပေး */
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  footer {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  
+  .container {
+    padding-bottom: 60px;
+  }
+}
+    
+    @media (max-width: 600px) {
+      .services-grid {
+        width: 95%;
+      }
+      
+      h1.header {
+        font-size: 28px;
+      }
+      
+      .service button {
+        width: 180px;
+        height: 60px;
+        font-size: 16px;
+      }
+      
+      .form {
+        width: 95%;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="yimon">
-  <h1 class="header">🇲🇲Yi Mon Japanese Form Services🇲🇲</h1>
-  </div>
-  <div id="btndiv">
-    <div class="service">
-  <button id="show1">🇯🇵JLPT🇯🇵</button>
-  </div>
-  <div class="service">
-  <button id="show2">🇯🇵J.Test🇯🇵</button>
-  </div>
-  <div class="service">
-  <button id="show3">🇯🇵JFT🇯🇵</button>
-  </div>
-  <div class="service">
-  <button id="show4">🇯🇵Tokutei🇯🇵</button>
-  </div>
-  <div class="service">
-   <button id="show5">🇯🇵NAT-TEST🇯🇵</button>
-   </div>
-   <div class="service">
-    <button id="show6">🇯🇵BJT🇯🇵</button>
+  <div class="container">
+    <div class="header">
+      <h1 class="header">🇲🇲Yi Mon Japanese Form Services🇯🇵</h1>
     </div>
-    <div class="service">
-     <button id="show7">🇯🇵EJU🇯🇵</button>
-     </div>
-     <div class="service">
-      <button id="show8">🇯🇵TOPJ🇯🇵</button>
+    
+    <div class="content">
+      <h2>Avaliable Services</h2>
+      <img src="Sor.png" class="sor-sticker" alt="Sor Sticker">
+      <p>
+        မဂ်လာပါ။လူကြီးမင်းတို့ရဲ့ Road to Sakura Landအတွက် ပထမခြေလှမ်း အတွက်JLPT စာမေးပွဲကို ခေါင်းရှုပ်မခံပဲ
+၀င်ရောက်ဖြေဆို နိုင်ရန်အတွက် ကျွန်မတို့ရဲ့ ဘာညာ ဘာညာ ပေါ့😝😝
+      </p>
+    </div>
+    
+    <div class="services-grid" id="servicesGrid">
+      <div class="service">
+        <button id="show1"><h2>Details</h2></button>
       </div>
       <div class="service">
-       <button id="show9">🇯🇵STBJ🇯🇵</button>
-       </div>
-       </div>
-        <!--JLPT-->
-  <div class="form" id="hidden1">
-    <button id="x1">X</button>
-    <div class="jlpt" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
+        <button id="show2">🇯🇵J.Test🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show3">🇯🇵JFT🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show4">🇯🇵Tokutei🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show5">🇯🇵NAT-TEST🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show6">🇯🇵BJT🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show7">🇯🇵EJU🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show8">🇯🇵TOPJ🇯🇵</button>
+      </div>
+      <div class="service">
+        <button id="show9">🇯🇵STBJ🇯🇵</button>
+      </div>
     </div>
-   <p>
-     ၁။ စာမေးပွဲကျင်းပမည့်ရက်🕒-->၂၀၂၅ ခုနှစ်၊ဒီဇင်ဘာလ (၇) ရက်နေ့<b>7.12.2025</b>(တနင်္ဂနွေနေ့)</p><br>
-<p>၂။ စာမေးပွဲကျင်းပမည့်နေရာ🏛️--->ရန်ကုန်မြို့နှင့် မန္တလေးမြို့။<br>
-၃။Registration Formတင်ချိန်⏳-->(2.8.2025)မှ(13.8.2025)</p><br>
-<p>၄။Form နှုန်းထားများ💲💲</p><br>
-<table>
-  <tr>
-    <th>Level</th>
-  <th>စာမေးပွဲကြေး</th>
-<th>လျှောက်လွာတင်ကြေး</th>
-<th>Service Feed</th>
-<th>Total</th>
-</tr>
-<tr>
-  <td>N1</td>
-  <td>52000Ks</td>
-  <td>5000Ks</td>
-  <td>10000Ks</td>
-  <td>67000ks</td>
-</tr>
-<tr>
-  <td>N2</td>
-  <td>52000Ks</td>
-  <td>5000Ks</td>
-  <td>10000Ks</td>
-  <td>67000ks</td>
-</tr>
-<tr>
-  <td>N3</td>
-  <td>52000Ks</td>
-  <td>5000Ks</td>
-  <td>10000Ks</td>
-  <td>67000ks</td>
-</tr>
-<tr>
-  <td>N4</td>
-  <td>47000Ks</td>
-  <td>5000Ks</td>
-  <td>10000Ks</td>
-  <td>62000ks</td>
-</tr>
-<tr>
-  <td>N5</td>
-  <td>47000Ks</td>
-  <td>5000Ks</td>
-  <td>10000Ks</td>
-  <td>62000ks</td>
-</tr>
-</table>
-<p><b>
-  ၅။Form Serviceအပ်နှံရန် လိုအပ်သည့် အချတ်များ</b><br>
-(၁)နိုင်ငံသားသက်သေခံကတ်ပြား(မှတ်ပုံတင်)<br>
-(၂)E-mail account<br>
-(၃)ကာလာဓါတ်ပုံ (Image File) JPEG or PNG <br>
-(၄)သက်သေခံကတ်ပြား ကာလာ  ဖိုင် (JPEG or PNG)<br>
-(၅)လျှောက်ထားသူ ၏ လက်မှတ် Image File<br>
-တို့ကို အောက်ဖော်ပြပါ ဖုန်းနံပါက်များမှတစ်ဆင့် သက်ဆိုင်ရာTelegram,Viberတို့မှပေးပို့ပြီး အပ်နှံနိုင်ပါတယ်ရှင့်။<br>☎️09-661539343<br>
-☎️09-661539343
-   </p>
-  </div>
-        <!--J.Test-->
-  <div class="form" id="hidden2">
-    <button id="x2">X</button>
-    <div class="jtest" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JST စာမေးပွဲ 🇯🇵
+    
+    <!-- JLPT Form -->
+    <div class="form" id="hidden1">
+      <button id="x1">X</button>
+      <div class="form-header">
+        🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
+      </div>
+      <p>
+        ၁။ စာမေးပွဲကျင်းပမည့်ရက်🕒-->၂၀၂၅ ခုနှစ်၊ဒီဇင်ဘာလ (၇) ရက်နေ့<b>7.12.2025</b>(တနင်္ဂနွေနေ့)
+      </p>
+      <p>
+        ၂။ စာမေးပွဲကျင်းပမည့်နေရာ🏛️--->ရန်ကုန်မြို့နှင့် မန္တလေးမြို့။<br>
+        ၃။Registration Formတင်ချိန်⏳-->(2.8.2025)မှ(13.8.2025)
+      </p>
+      <p>၄။Form နှုန်းထားများ💲💲</p>
+      <table>
+        <tr>
+          <th>Level</th>
+          <th>စာမေးပွဲကြေး</th>
+          <th>လျှောက်လွာတင်ကြေး</th>
+          <th>Service Fee</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>N1</td>
+          <td>52000Ks</td>
+          <td>5000Ks</td>
+          <td>10000Ks</td>
+          <td>67000ks</td>
+        </tr>
+        <tr>
+          <td>N2</td>
+          <td>52000Ks</td>
+          <td>5000Ks</td>
+          <td>10000Ks</td>
+          <td>67000ks</td>
+        </tr>
+        <tr>
+          <td>N3</td>
+          <td>52000Ks</td>
+          <td>5000Ks</td>
+          <td>10000Ks</td>
+          <td>67000ks</td>
+        </tr>
+        <tr>
+          <td>N4</td>
+          <td>47000Ks</td>
+          <td>5000Ks</td>
+          <td>10000Ks</td>
+          <td>62000ks</td>
+        </tr>
+        <tr>
+          <td>N5</td>
+          <td>47000Ks</td>
+          <td>5000Ks</td>
+          <td>10000Ks</td>
+          <td>62000ks</td>
+        </tr>
+      </table>
+      <p>
+        <b>၅။Form Serviceအပ်နှံရန် လိုအပ်သည့် အချက်များ</b><br>
+        (၁)နိုင်ငံသားသက်သေခံကတ်ပြား(မှတ်ပုံတင်)<br>
+        (၂)E-mail account<br>
+        (၃)ကာလာဓါတ်ပုံ (Image File) JPEG or PNG <br>
+        (၄)သက်သေခံကတ်ပြား ကာလာ ဖိုင် (JPEG or PNG)<br>
+        (၅)လျှောက်ထားသူ ၏ လက်မှတ် Image File<br>
+        တို့ကို အောက်ဖော်ပြပါ ဖုန်းနံပါတ်များမှတစ်ဆင့် သက်ဆိုင်ရာTelegram,Viberတို့မှပေးပို့ပြီး အပ်နှံနိုင်ပါတယ်ရှင့်။<br>
+        ☎️09-661539343<br>
+        ☎️09-661539343
+      </p>
     </div>
-    <!-- ကျန်တဲ့ JST content တွေ -->
+    <footer>
+  <div class="footer-content">
+    <p>© 2025 Yi Mon Japanese Form Services. All Rights Reserved.</p>
+    <p>Contact: yimonjapanese@gmail.com | Phone: 09-661539343</p>
   </div>
-        <!--JFT-->
-  <div class="form" id="hidden3">
-    <button id="x3">X</button>
-    <div class="jft" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JLPT content တွေ -->
+</footer>
   </div>
-        <!--Tokutei-->
-  <div class="form" id="hidden4">
-    <button id="x4">X</button>
-    <div class="tokutei" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JST စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JST content တွေ -->
-  </div>
-        <!--NAT-TEST-->
-  <div class="form" id="hidden5">
-    <button id="x5">X</button>
-    <div class="nat-test" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JLPT content တွေ -->
-  </div>
-        <!--BJT-->
-  <div class="form" id="hidden6">
-    <button id="x6">X</button>
-    <div class="bjt" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JST စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JST content တွေ -->
-  </div>
-        <!--EJU-->
-  <div class="form" id="hidden7">
-    <button id="x7">X</button>
-    <div class="eju" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JLPT content တွေ -->
-  </div>
-        <!--TOPJ-->
-  <div class="form" id="hidden8">
-    <button id="x8">X</button>
-    <div class="jtop" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JST စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JST content တွေ -->
-  </div>
-          <!--STBJ-->
-  <div class="form" id="hidden9">
-    <button id="x9">X</button>
-    <div class="stbj" id="h">
-      🇯🇵၂၀၂၅ ခုနှစ်၊ ဒီဇင်ဘာလ JLPT စာမေးပွဲ 🇯🇵
-    </div>
-    <!-- ကျန်တဲ့ JLPT content တွေ -->
-  </div>
-  <footer>
-    <i>All rights reserved. Copyright@2025-2028</i>
-  </footer>
 
   <script>
-    // JLPT Form အတွက်
+    // JLPT Form
     document.getElementById('show1').addEventListener('click', function() {
-  document.getElementById('hidden1').classList.add('visible');
-  document.getElementById('btndiv').style.display = 'none'; // btndiv ကိုပျောက်သွားစေမယ်
-});
-
-document.getElementById('x1').addEventListener('click', function() {
-  document.getElementById('hidden1').classList.remove('visible');
-  document.getElementById('btndiv').style.display = 'block'; // btndiv ကိုပြန်ပြမယ်
-});
-
+      document.getElementById('hidden1').classList.add('visible');
+      document.getElementById('servicesGrid').style.display = 'none';
+      document.getElementById('content').style.display = 'none';
+    });
+    
+    document.getElementById('x1').addEventListener('click', function() {
+      document.getElementById('hidden1').classList.remove('visible');
+      document.getElementById('servicesGrid').style.display = 'flex';
+      document.getElementById('content').style.display = 'flex';
+    });
+    
+    // အခြား form တွေအတွက် အတူတူ logic ကိုသုံးနိုင်ပါတယ်
+    // document.getElementById('show2').addEventListener('click', function() {
+    //   document.getElementById('hidden2').classList.add('visible');
+    //   document.getElementById('servicesGrid').style.display = 'none';
+    // });
+    // ...
   </script>
 </body>
 </html>
